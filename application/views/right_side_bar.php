@@ -7,7 +7,7 @@
 
         $banners=$banner_query->result();
 
-            if($banners != '')
+            if(count($banners)>0)
             {
                 $count = rand(0,count($banners)-1);
 

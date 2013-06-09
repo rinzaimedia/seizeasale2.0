@@ -11,7 +11,7 @@
 |	http://www.your-site.com/
 |
 */
-$config['base_url']	= "http://localhost/karthi_code/sept_0.1/";
+$config['base_url']	= "http://localhost/";
 
 /*
 |--------------------------------------------------------------------------
@@ -331,7 +331,7 @@ $config['proxy_ips'] = '';
 
 //DB
 $config['hostname'] = "localhost";
-						   $config['db_username'] = "root";
-						   $config['db_password'] = "";
-						   $config['db'] = "test_groupon";
+						   $config['db_username'] = "seize_asale";
+						   $config['db_password'] = "at0m1cvoice";
+						   $config['db'] = "seizeasa_new";
 						   $config['admin_controllers_folder'] 	= 'siteadmin'; //No trailing slash?>
