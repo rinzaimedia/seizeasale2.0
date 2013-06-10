@@ -46,7 +46,7 @@ $(document).ready(function(){
         	<div id="Logo">
             	<p>
                 	<a href="<?php echo base_url()?>">
-                		<img src="<?php echo base_url()?>css/logo/<?php echo $this->config->item('site_logo')?>" alt="Sept" />
+                		<img src="<?php echo base_url()?>css/logo/<?php echo $this->config->item('site_logo')?>" alt="Seize A Sale" />
                     </a>
                 </p>
             </div>

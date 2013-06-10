@@ -121,7 +121,7 @@ class SiteSettings extends CI_Controller {
 			$this->form_validation->set_rules('offline_message','lang:offline_message_validation','required|trim|xss_clean');
 			$this->form_validation->set_rules('site_meta_tag','lang:forced_escrow_validation','required|trim|xss_clean');
 			$this->form_validation->set_rules('site_meta_description','lang:forced_escrow_validation','required|trim|xss_clean');
-			$this->form_validation->set_rules('payment_settings','lang:payment_settings_validation','numeric|required|trim|xss_clean');
+			/*$this->form_validation->set_rules('payment_settings','lang:payment_settings_validation','numeric|required|trim|xss_clean');
 			$this->form_validation->set_rules('featured_projects_limit','lang:featured_projects_limit_validation','numeric|required|trim|xss_clean');
 			$this->form_validation->set_rules('urgent_projects_limit','lang:urgent_projects_limit_validation','numeric|required|trim|xss_clean');
 			$this->form_validation->set_rules('latest_projects_limit','lang:latest_projects_limit_validation','numeric|required|trim|xss_clean');
@@ -142,7 +142,7 @@ class SiteSettings extends CI_Controller {
 			$this->form_validation->set_rules('twitter_password','lang:twitter_password_validation','alpha_numeric|trim|xss_clean');
 			//$this->form_validation->set_rules('file','Upload File','callback_upload_file');
 			
-			$this->form_validation->set_rules('private_project_amount','lang:private_project_amount_validation','numeric|required|trim|xss_clean');
+			$this->form_validation->set_rules('private_project_amount','lang:private_project_amount_validation','numeric|required|trim|xss_clean');*/
 			if($this->form_validation->run())
 			{	
 			  $updateData                   	= array();
@@ -186,7 +186,7 @@ class SiteSettings extends CI_Controller {
 		
 				$config['allowed_types'] = 'gif|jpg|png';
 				
-				$config['max_width'] = '250';
+				$config['max_width'] = '210';
 				
 				$config['max_height'] = '100';
 				
