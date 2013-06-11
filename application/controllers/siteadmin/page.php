@@ -133,9 +133,17 @@ class Page extends CI_Controller {
 
 				  //Add Groups
 				  $this->page_model->addpage($insertData);
-				  
+
+                  $result=$this->common_model->insertData("page",$insertdata);
+
+                    if($result)
+                        $this->session->set_flashdata('flash_message', $this->common_model->admin_flash_message('success','Deal Inserted Successfully'));
+                    else
+                        $this->session->set_flashdata('flash_message', $this->common_model->admin_flash_message('error','Deal Not Inserted'));
+
+                    //redirect_admin("deals");
 				  //Notification message
-				  $this->session->set_flashdata('flash_message', $this->common_model->admin_flash_message('success',$this->lang->line('added_success')));
+				 // $this->session->set_flashdata('flash_message', $this->common_model->admin_flash_message('success',$this->lang->line('added_success')));
 				   redirect_admin('page/viewPages');
 		 	} 
 		} //If - Form Submission End
