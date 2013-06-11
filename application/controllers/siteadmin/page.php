@@ -109,7 +109,8 @@ class Page extends CI_Controller {
 		$this->load->helper('form');
 		
 		//Intialize values for library and helpers	
-		$this->form_validation->set_error_delimiters($this->config->item('field_error_start_tag'), $this->config->item('field_error_end_tag'));
+		$this->form_validation->set_error_delimiters($this->config->item('field_error_start_tag'),
+            $this->config->item('field_error_end_tag'));
 		
 		if($this->input->post('addPage'))
 		{	
@@ -127,6 +128,7 @@ class Page extends CI_Controller {
 			      $insertData['page_title'] 		= $this->input->post('page_title');
 				  $insertData['url']  		       	= $this->input->post('page_url');
 				  $insertData['content']  	     	= $this->input->post('page_content');
+                  $insertData['is_active']          = '1';
 				  $insertData['created']			= get_est_time();
 
 				  //Add Groups
