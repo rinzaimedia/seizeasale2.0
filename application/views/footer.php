@@ -5,7 +5,7 @@
     </div>
     <div id="Footer">
     	<p><a href="/page/merchant-faq">Merchants</a>|<a href="/page/how-it-works">How it works</a>|<a href="/home/faq">FAQ</a>|<a href="#">Promote your business</a>|<a href="#">Press</a></p>
-        <p><a href="/page/contact">Contact</a>|<a href="/page/terms-of-use">Terms of Use</a>|<a href="/page/privacy-policy">Privacy Policy</a></p>
+        <p><a href="contact">Contact</a>|<a href="/page/terms-of-use">Terms of Use</a>|<a href="/page/privacy-policy">Privacy Policy</a></p>
     </div>
 </div>
 <?php
