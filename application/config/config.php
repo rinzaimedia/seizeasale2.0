@@ -11,7 +11,7 @@
 |	http://www.your-site.com/
 |
 */
-$config['base_url']	= "http://localhost/";
+$config['base_url']	= "http://seizeasale.com/";
 
 /*
 |--------------------------------------------------------------------------
@@ -333,5 +333,5 @@ $config['proxy_ips'] = '';
 $config['hostname'] = "localhost";
 						   $config['db_username'] = "seize_asale";
 						   $config['db_password'] = "at0m1cvoice";
-						   $config['db'] = "seizeasa_new";
+						   $config['db'] = "seizeasa_le20";
 						   $config['admin_controllers_folder'] 	= 'siteadmin'; //No trailing slash?>
