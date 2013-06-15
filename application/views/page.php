@@ -20,6 +20,7 @@ $(document).ready(function(){
 					if(isset($page_content) and $page_content->num_rows()>0) 
 					{ 
 					 $pages = $page_content->row();
+
 					?>
     		         <?php echo $pages->page_title; ?>
 					 <?php 

@@ -31,7 +31,7 @@
  
  */
  class Page_model extends CI_Model {
-	 
+
 	/**
 	 * Constructor 
 	 *
@@ -77,6 +77,9 @@
 		// Puhal changes Start. For the popup pages Privacy Policy and the Company & Conditions (Sep 17 Issue 2)	 
 	 function getPages($conditions=array(),$like=array(),$like_or=array())
 	 {
+         $this->load->helper('url');
+
+         //echo $this->uri->segment(2);
 	 	//Check For like statement
 	 	if(is_array($like) and count($like)>0)		
 	 		$this->db->like($like);
@@ -84,10 +87,14 @@
 		//Check For like statement
 	 	if(is_array($like_or) and count($like_or)>0)		
 	 		$this->db->or_like($like_or);
+
 // Puhal changes End. For the popup pages Privacy Policy and the Company & Conditions (Sep 17 Issue 2)			
 	 	if(count($conditions)>0)		
 	 		$this->db->where($conditions);
-		
+
+
+
+
 		$this->db->from('page');
 	 	$this->db->select('page.id,page.url,page.created,page.name,page.page_title,page.content,page.is_active');
 		$result = $this->db->get();

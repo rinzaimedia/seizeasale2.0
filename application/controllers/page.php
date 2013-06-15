@@ -79,7 +79,8 @@ class Page extends CI_Controller {
 		$this->load->model('auth_model');
 		
 		$this->load->library('session');
-		$this->load->model('skills_model');
+
+		$this->load->model('page_model');
 		
 		
 		//Page Title and Meta Tags
@@ -90,7 +91,7 @@ class Page extends CI_Controller {
 		$this->outputData['loggedInUser'] 	= $this->loggedInUser;
 		
 		//Get Footer content
-		$conditions = array('page.is_active'=> 1);
+		$conditions = array('page.is_active'=> 1, 'page.url'=>  $this->uri->segment(2));
 		$this->outputData['pages']	=	$this->page_model->getPages($conditions);	
 		
 		//Get Latest Projects
@@ -121,8 +122,9 @@ class Page extends CI_Controller {
 		  // Operation on uri_segment(2)
 		
 	     	// load lang file
-		    
-		  	 $conditions = array('page.url'=> $this->uri->segment(2));
+            $url = uri_string();
+
+
 			 $this->outputData['page_content']	=	$this->page_model->getPages($conditions);	
 				
 			 if($this->uri->segment(2)=='')	
@@ -158,7 +160,7 @@ class Page extends CI_Controller {
 	function view()
 	{
 	   // get the page uri name
-	   $page_url					= $this->uri->segment(3);
+	   $page_url					= $this->uri->segment(2);
 	   $conditions = array('page.url'=>$page_url);
 	   $this->outputData['page_content']	=	$this->page_model->getPages($conditions);	
 	  //Load View	
