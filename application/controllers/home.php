@@ -264,7 +264,12 @@ class Home extends CI_Controller
 			redirect("deals");
 		
 		$data=array();
-		
+        $jsonipurl = file_get_contents("http://freegeoip.net/json/");
+        $json = json_decode($jsonipurl);
+        if($city_name == "")
+        {
+            $city_name = str_replace(" ","-",strtolower($json->city));
+        }
 		$data["title"]="Deals Detail";
 		
 		$deal_contision=array("slug"=>$slug);
