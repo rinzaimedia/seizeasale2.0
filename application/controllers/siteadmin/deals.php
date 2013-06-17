@@ -419,7 +419,7 @@ class Deals extends CI_Controller
 					
 					$this->load->library('upload',$config);
 					
-					unlink($config['upload_path'].$old_image);
+					//unlink($config['upload_path'].$old_image);
 					
 					if (!$this->upload->do_upload("deal_image"))
 					{
