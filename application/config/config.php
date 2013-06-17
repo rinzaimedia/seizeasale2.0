@@ -18,7 +18,7 @@ if($_SERVER['SERVER_NAME'] == 'localhost')
 }
 else
 {
-    $url == "";
+    $url = "";
 }
 if($url == "local")
 {
