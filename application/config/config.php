@@ -16,6 +16,10 @@ if($_SERVER['SERVER_NAME'] == 'localhost')
 {
     $url = "local";
 }
+else
+{
+    $url == "";
+}
 if($url == "local")
 {
     $config['base_url'] = "http://localhost:8888/";
