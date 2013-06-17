@@ -194,12 +194,7 @@ class Home extends CI_Controller
 	}
 	function deals($city_name="")
 	{
-        $jsonipurl = file_get_contents("http://freegeoip.net/json/");
-        $json = json_decode($jsonipurl);
-        if($city_name == "")
-        {
-            $city_name = str_replace(" ","-",strtolower($json->city));
-        }
+
 
 		$data=array();
 		
