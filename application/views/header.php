@@ -10,7 +10,7 @@
 	if($this->config->item('site_title')!="")
 		echo $this->config->item('site_title');
 	else
-		echo "Cogzidel Sept";
+		echo "Seize A Sale";
 	
 ?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>css/common.css" />
@@ -40,6 +40,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+
 <div id="Container">
 	<div id="Header" class="clearfix">
     	<div id="Header_Left" class="clsFloatLeft">

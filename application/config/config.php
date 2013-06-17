@@ -11,8 +11,19 @@
 |	http://www.your-site.com/
 |
 */
-$config['base_url']	= "http://seizeasale.com/";
 
+if($_SERVER['SERVER_NAME'] == 'localhost')
+{
+    $url = "local";
+}
+if($url == "local")
+{
+    $config['base_url'] = "http://localhost:8888/";
+}
+else
+{
+    $config['base_url']	= "http://seizeasale.com/";
+}
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -330,8 +341,21 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 //DB
-$config['hostname'] = "localhost";
-						   $config['db_username'] = "seize_asale";
-						   $config['db_password'] = "at0m1cvoice";
-						   $config['db'] = "seizeasa_le20";
-						   $config['admin_controllers_folder'] 	= 'siteadmin'; //No trailing slash?>
+
+if($url == "local")
+{
+    $config['hostname'] = "localhost";
+	$config['db_username'] = "seize_asale";
+	$config['db_password'] = "at0m1cvoice";
+	$config['db'] = "seizeasa_new";
+	$config['admin_controllers_folder'] 	= 'siteadmin'; //No trailing slash
+}
+else
+{
+    $config['hostname'] = "localhost";
+    $config['db_username'] = "seize_asale";
+    $config['db_password'] = "at0m1cvoice";
+    $config['db'] = "seizeasa_le20";
+    $config['admin_controllers_folder'] 	= 'siteadmin'; //No trailing slash
+}
+?>

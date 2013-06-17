@@ -6,9 +6,10 @@ class Home extends CI_Controller
 	var $facebook;
 	
 	var $time_zone;
-	
+
 	var $facebook_app_id,$facebook_scret_id,$facebook_user,$user_profile;
-	
+
+
 	function Home()
 	{
 		parent::__construct();
@@ -156,6 +157,12 @@ class Home extends CI_Controller
 	}
 	function index($city_name='')
 	{
+        $jsonipurl = file_get_contents("http://freegeoip.net/json/");
+        $json = json_decode($jsonipurl);
+        if($city_name == "")
+        {
+            $city_name = str_replace(" ","-",strtolower($json->city));
+        }
 		$data=array();
 		
 		if($this->user_profile)
@@ -187,6 +194,13 @@ class Home extends CI_Controller
 	}
 	function deals($city_name="")
 	{
+        $jsonipurl = file_get_contents("http://freegeoip.net/json/");
+        $json = json_decode($jsonipurl);
+        if($city_name == "")
+        {
+            $city_name = str_replace(" ","-",strtolower($json->city));
+        }
+
 		$data=array();
 		
 		$city_where=array("status"=>1);

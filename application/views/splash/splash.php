@@ -9,7 +9,7 @@ $(document).ready(function(){
         <?php echo form_open("home/subscribe",array("name"=>"subscribe","id"=>"subscribe"))?>
         <div id="selSign_Form">
         	 <div class="clsInput_Bg1">
-		         <p><input type="text" value="Enter your Email Address"  class="email" name="email" id="email"/></p>
+		         <p><input type="text" value="Enter Your Email Address"  class="email" name="email" id="email"/></p>
                  <!--<p class="Frm_Error_Msg">Error Msg Here</p>-->
              </div>
              <div class="clsInput_Bg2">

@@ -2,7 +2,7 @@
 	$this->load->view("header");
 ?>
 <div id="Main_left" class="clsFloatLeft">
-<h1 class="Main_Tittle"><span>Welcome to <?php echo $this->config->item("google_ad_sense")?>!</span> 24 hours to buy and consume up to 6 months </h1>
+<h1 class="Main_Tittle"><span>Welcome to <?php echo $this->config->item("google_ad_sense")?>!</span> find your deal and up to 6 months to redeem </h1>
 <?php
 $count=count($deal_datas);
 if($count!=0)
